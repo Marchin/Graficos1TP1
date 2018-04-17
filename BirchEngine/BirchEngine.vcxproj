@@ -115,13 +115,18 @@ copy "$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.dll" "$(OutDir)"</Comm
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>D:\Image Campus\Graficos 1\SDL2_ttf-2.0.14\include;D:\Image Campus\Graficos 1\SDL2-2.0.8\include;D:\Image Campus\Graficos 1\SDL2_image-2.0.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\SDL2_image-2.0.3\include;$(SolutionDir)Libs\SDL2_ttf-2.0.14\include;$(SolutionDir)Libs\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>D:\Image Campus\Graficos 1\SDL2_ttf-2.0.14\lib\x86;D:\Image Campus\Graficos 1\SDL2-2.0.8\lib\x86;D:\Image Campus\Graficos 1\SDL2_image-2.0.3\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x64;$(SolutionDir)Libs\SDL2_image-2.0.3\lib\x64;$(SolutionDir)Libs\SDL2-2.0.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Libs\SDL2-2.0.8\lib\x64\SDL2.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\SDL2_image-2.0.3\lib\x64\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x64\SDL2_ttf.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -129,15 +134,20 @@ copy "$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.dll" "$(OutDir)"</Comm
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\Dev\SDL2_ttf-2.0.14\include;C:\Dev\SDL2_image-2.0.1\include;C:\Dev\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\SDL2_image-2.0.3\include;$(SolutionDir)Libs\SDL2_ttf-2.0.14\include;$(SolutionDir)Libs\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\SDL2_ttf-2.0.14\lib\x86;C:\Dev\SDL2_image-2.0.1\lib\x86;C:\Dev\BirchEngine\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x86;$(SolutionDir)Libs\SDL2_image-2.0.3\lib\x86;$(SolutionDir)Libs\SDL2-2.0.8\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Libs\SDL2-2.0.8\lib\x86\SDL2.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\SDL2_image-2.0.3\lib\x86\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -145,15 +155,20 @@ copy "$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.dll" "$(OutDir)"</Comm
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\Dev\SDL2_ttf-2.0.14\include;C:\Dev\SDL2_image-2.0.1\include;C:\Dev\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\SDL2_image-2.0.3\include;$(SolutionDir)Libs\SDL2_ttf-2.0.14\include;$(SolutionDir)Libs\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\SDL2_ttf-2.0.14\lib\x86;C:\Dev\SDL2_image-2.0.1\lib\x86;C:\Dev\BirchEngine\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x64;$(SolutionDir)Libs\SDL2_image-2.0.3\lib\x64;$(SolutionDir)Libs\SDL2-2.0.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)Libs\SDL2-2.0.8\lib\x64\SDL2.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\SDL2_image-2.0.3\lib\x64\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Libs\SDL2_ttf-2.0.14\lib\x64\SDL2_ttf.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Src\AssetManager.cpp" />
